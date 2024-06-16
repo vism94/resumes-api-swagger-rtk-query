@@ -9,6 +9,7 @@ const app = express();
 
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(express.static('public'));
 
 app.use('/api/resumes', resumesRouter);
 app.use('/api/comments', commentsRouter);

@@ -10,6 +10,7 @@ const resumeSchema = z.object({
   technologies: z.array(z.string()),
   achievments: z.array(z.string()),
   education: z.string(),
+  position: z.string(),
   prefered: z.string(),
   phone: z.string(),
   telegram: z.string(),

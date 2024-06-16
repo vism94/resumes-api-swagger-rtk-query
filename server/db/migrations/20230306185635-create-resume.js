@@ -33,6 +33,9 @@ module.exports = {
       education: {
         type: Sequelize.STRING,
       },
+      position: {
+        type: Sequelize.STRING,
+      },
       prefered: {
         type: Sequelize.STRING,
       },

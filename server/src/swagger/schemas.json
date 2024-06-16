@@ -71,6 +71,10 @@
         "type": "string",
         "description": "Образование"
       },
+      "position": {
+        "type": "string",
+        "description": "Должность трудоустройства"
+      },
       "prefered": {
         "type": "string",
         "description": "Предпочитаемый способ связи"

@@ -152,8 +152,23 @@ const education = [
 
 const prefered = ['по телефону', 'в telegram', 'по whatsapp', 'по email', 'лично'];
 
+const position = [
+  'Fullstack-разработчик',
+  'Frontend-разработчик',
+  'Backend-разработчик',
+  'Фулстек девелопер',
+  'Фронтенд разработчик',
+  'Бэкенд разработчик',
+  'Web developer',
+  'Веб разработчик',
+  'Frontend/Fullstack программист',
+  'Fullstack программист',
+  'Frontend программист'
+]
+
 module.exports = {
   about,
+  position,
   prefered,
   technologies,
   achievments,

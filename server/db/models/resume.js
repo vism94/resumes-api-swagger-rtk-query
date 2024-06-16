@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       technologies: DataTypes.ARRAY(DataTypes.STRING),
       achievments: DataTypes.ARRAY(DataTypes.STRING),
       education: DataTypes.STRING,
+      position: DataTypes.STRING,
       prefered: DataTypes.STRING,
       phone: DataTypes.STRING,
       telegram: DataTypes.STRING,
