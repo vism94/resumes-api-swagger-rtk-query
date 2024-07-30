@@ -1,37 +1,25 @@
-import React, { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import elbrusLogo from './assets/elbrus.svg';
-import './App.css';
+// src/App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
+import CandidatesPage from './components/pages/CandidatesPage';
+import ResumePage from './components/pages/ResumePage';
+import ImportantCommentsPage from './components/pages/ImportantCommentsPage';
+import AcceptedResumesPage from './components/pages/AcceptedResumesPage';
+import HomePage from './components/pages/HomePage'; // Импортируем новую главную страницу
 
-function App(): JSX.Element {
-  const [count, setCount] = useState(0);
-
+export default function App(): JSX.Element {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://github.com/Elbrus-Bootcamp" target="_blank" rel="noreferrer">
-          <img src={elbrusLogo} className="logo elbrus" alt="Elbrus logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h2>Elbrus Bootcamp</h2>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button" onClick={() => setCount((prev) => prev + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </div>
+    <ChakraProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} /> {/* Добавляем маршрут для главной страницы */}
+          <Route path="/candidates" element={<CandidatesPage />} />
+          <Route path="/candidates/:id" element={<ResumePage />} />
+          <Route path="/comments/important" element={<ImportantCommentsPage />} />
+          <Route path="/accepted" element={<AcceptedResumesPage />} />
+        </Routes>
+      </Router>
+    </ChakraProvider>
   );
 }
-
-export default App;
